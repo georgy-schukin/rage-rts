@@ -10,3 +10,15 @@
 *.lai
 *.la
 *.a
+
+# MSVS #
+*.obj
+*.pdb
+*.idb
+*.ipch
+*.sdf
+*.exe
+*.manifest
+*.log
+*.tlog
+*.ilk
