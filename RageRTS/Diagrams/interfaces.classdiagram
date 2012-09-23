@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="d495950e-86aa-45c5-9b58-490b97286203" name="interfaces" linkedPackageId="f470ed5e-92e5-4620-a542-509a060ac31a" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="8933c025-5181-4935-8668-0da83052633a">
+      <profileInstance Id="262898a0-a6d1-4879-b33c-daa453267d03" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="40e9d1a0-cf22-469a-b09f-09cf9768d2a5">
+      <profileInstance Id="f100b675-518a-48fc-a326-1562260cc03d" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="d5e807c9-9baa-4e52-9cfd-c8b9f6a6d845" name="IProcScheduler" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="38d59ae6-7761-4297-a5de-7ea008e8a972" />
+        <ownedOperations>
+          <operation Id="26742cc2-b780-4bba-ad11-335cc6c692e0" name="scheduleProc" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="27fd6d24-9130-4127-b002-f61542ca7c0c" />
+          </operation>
+          <operation Id="cc81cd11-e2f9-4a5b-9775-5cc04141d63f" name="addProc" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5da81afd-3e74-4af2-9d11-b78ad8681df7" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="af41685d-c638-4cbe-94f3-d08a6ffa5ed9" name="proc" direction="In">
+                  <elementDefinition Id="be1baae1-4152-4a7b-895a-43ebd8233954" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="689004b7-dcd1-4a34-b189-a9f5d0b2aec8" LastKnownName="Procedure" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="724a8c6d-e78d-41c1-a0f5-b0774d1ee30b" name="removeProc" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="6d40f4e6-fb54-4868-a777-7c3c1131e151" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="66f88dd7-a503-4f3a-a9a6-f49b6041212b" name="proc" direction="In">
+                  <elementDefinition Id="680f0773-9b0a-485b-81da-b1ef8bbba019" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="689004b7-dcd1-4a34-b189-a9f5d0b2aec8" LastKnownName="Procedure" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="340b7eac-17cd-4b3e-96dd-d719ece8500d" name="ITaskExecutor" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4099696a-80d0-4b6b-a0da-c8a84bd82f33" />
+        <ownedOperations>
+          <operation Id="af4011eb-7177-457c-92ef-b25bac30c003" name="executeTask" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="220bdb4b-f205-4076-8888-efd6f00978f2" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="36a2a4bf-ab62-49e7-97a8-5977fe490f5e" name="task" direction="In">
+                  <elementDefinition Id="1eb5cc6a-7518-4d57-8d5b-99f13b86768b" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="e51a3bd7-2f14-4031-8288-10a297c6b4f3" LastKnownName="Task" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="513e74aa-21cb-4191-94de-37e94bf620f4" name="ITaskListener" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c6aa1370-182b-4b9a-bfba-efe20ec9d96c" />
+        <ownedOperations>
+          <operation Id="657409ee-a4b5-4633-9eca-e2c252ab7b1a" name="onTaskStart" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="769bf54c-99d1-4924-9f8e-65cd40f07f51" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="9a990fd5-08f7-42e5-85fc-46d480c919cb" name="task" direction="In">
+                  <elementDefinition Id="ff7d2dad-8b50-45a5-ac88-9fae924ed020" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="e51a3bd7-2f14-4031-8288-10a297c6b4f3" LastKnownName="Task" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="2d9cb556-837b-44ac-b4b1-0cef5bbe67eb" name="onTaskDone" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="75cf56ad-65d1-4441-ad19-3f0dd64b3171" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="93761cb1-7513-4579-839e-5e4f057aa899" name="task" direction="In">
+                  <elementDefinition Id="0673ccd9-b08a-4eb3-ae4a-119e46aad9e5" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="e51a3bd7-2f14-4031-8288-10a297c6b4f3" LastKnownName="Task" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="e422968d-b88a-43b9-a789-7316cdf1cd55" name="ITaskScheduler" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ed7d00c8-1e9b-4ae1-9a4c-7a9fe2e93f64" />
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="a77f477b-3e59-4aae-899c-adaec7c7d31b" name="IMigratable" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e223aaa6-6e8b-49ea-b84f-13ec8d209bb8" />
+        <ownedOperations>
+          <operation Id="8e91b10c-ae86-4967-97e3-223d8ad994cd" name="pack" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ad3a0290-062a-4023-a30c-e45048748b8c" />
+          </operation>
+          <operation Id="0c4ccd55-88d6-44dd-b476-80f17fe6bc8f" name="unpack" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="99ce9a07-82fc-4e2f-a40d-2cc094381355" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="689004b7-dcd1-4a34-b189-a9f5d0b2aec8" name="Procedure" isAbstract="false" isLeaf="false" cachedFullName="Diagrams::Procedure">
+        <elementDefinition Id="55933d1d-5b5d-4f64-ab79-a04f1d73bf4f" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="e51a3bd7-2f14-4031-8288-10a297c6b4f3" name="Task" isAbstract="false" isLeaf="false" cachedFullName="Diagrams::Task">
+        <elementDefinition Id="1ebc2fb4-8adf-40c6-b9d9-3def6bf6bc56" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="f470ed5e-92e5-4620-a542-509a060ac31a" name="Diagrams">
+    <elementDefinition Id="7cf2af60-f5b3-4bc7-b49b-2938e10fdd1d" />
+  </package>
+</logicalClassDesignerModel>

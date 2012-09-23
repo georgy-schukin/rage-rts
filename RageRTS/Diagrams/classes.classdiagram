@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="62ab7d2a-089d-43e7-b853-19524e27a0f9" name="classes" linkedPackageId="3b7f030a-5cbd-4edd-8d72-b784dfa2e41d" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="223d7a60-7628-47f8-8378-5235c20f41e3" name="Task" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1ebc2fb4-8adf-40c6-b9d9-3def6bf6bc56" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="f0fff97b-ad26-47ff-a1e1-a0c47635d015" name="DataObject" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="6863c031-0ca3-479c-a821-e930889f4fcb" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="85e0edb3-d2e4-4719-9588-dbc61053be0e" name="CodeVertex" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d5236a07-8065-4ad6-badc-f2ab30dae9d9" />
+        <ownedAttributesInternal>
+          <property Id="6e82d5d6-59f8-41a5-9b61-991501a5647a" name="id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="36a1ce2b-807f-47dc-be93-24cb8558e175" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="2d7cd63b-bba7-4be6-87a5-fd7990ce6b85" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+          <property Id="bc10c40d-b6e0-4e7a-9bb4-0b93053c68f4" name="type" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="9d8b4ad8-d9a1-4356-a1b7-09f2ebdbccb8" />
+          </property>
+          <property Id="d407eb9c-5474-4479-b078-549b773494f2" name="parent" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="42fee7df-921a-45ef-8fe1-b5693073f20c" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="bce67025-02fb-44a2-8d1d-2c3999d946e4" LastKnownName="CodeVertex" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e74d572b-0fa9-44d8-b15a-a01fc402db24" name="DataVertex" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="be119f89-e261-4c6a-a311-72c00e48488e" />
+        <generalsInternal>
+          <generalization Id="061e33f3-1ea3-4896-84e3-dc2963c254a7" isSubstitutable="false">
+            <classMoniker Id="85e0edb3-d2e4-4719-9588-dbc61053be0e" LastKnownName="CodeVertex" />
+            <elementDefinition Id="203fe5e1-d358-4c6c-92ac-fcde67416dba" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="126d96de-195e-4812-a726-63024b61d089" name="dataType" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c9db8ab2-dfb9-48fe-9b8b-fef5230c6590" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="6ccdf907-890e-458a-b054-b1ad28069662" name="CompVertex" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="89e2b527-477e-4168-b5f1-3fe891ae934f" />
+        <generalsInternal>
+          <generalization Id="e78b460e-4394-4477-a89c-b44cb451fb35" isSubstitutable="false">
+            <classMoniker Id="85e0edb3-d2e4-4719-9588-dbc61053be0e" LastKnownName="CodeVertex" />
+            <elementDefinition Id="72b3fc10-4e6b-4de4-a275-b6207ac4e862" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="d06ba2ba-8552-41a7-8bd6-6c197f92a29a" name="compType" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="72d647b7-0505-476b-a370-89294e355b43" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="b8eb2ffb-bdc7-4654-8887-a30bb217eb9c" name="BlockVertex" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e3ddd0d0-68f1-426f-b97f-c5e4c0fd092b" />
+        <generalsInternal>
+          <generalization Id="31a646d9-f3ec-46b9-9279-2d4513865768" isSubstitutable="false">
+            <classMoniker Id="6ccdf907-890e-458a-b054-b1ad28069662" LastKnownName="CompVertex" />
+            <elementDefinition Id="2c6838d9-caff-4432-993f-4b0f0460414b" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="a96bbabc-ac60-4dff-9841-31ffc7eca25b" name="Message" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e636ab1c-d73f-46f2-b442-138a5524fad4" />
+        <ownedAttributesInternal>
+          <property Id="5122c83e-d4dd-40b2-96de-b51c4bcb1397" name="id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="46ef6a6f-5063-463e-9f96-507943f30fa7" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="70dda0a7-0ffe-4bfa-9682-20ebc206dc7b" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="70dda0a7-0ffe-4bfa-9682-20ebc206dc7b" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="2d7cd63b-bba7-4be6-87a5-fd7990ce6b85" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="bce67025-02fb-44a2-8d1d-2c3999d946e4" name="CodeVertex" isAbstract="false" isLeaf="false" cachedFullName="Diagrams::CodeVertex">
+        <elementDefinition Id="d5236a07-8065-4ad6-badc-f2ab30dae9d9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="4c5d2c4b-246a-4a84-bef4-113f63dc3254" name="CallVertex" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="48b87a1d-6c6e-4d76-b76d-7fc0ae35919d" />
+        <generalsInternal>
+          <generalization Id="e83ff117-da36-48c7-a4ef-65f54bea237f" isSubstitutable="false">
+            <classMoniker Id="6ccdf907-890e-458a-b054-b1ad28069662" LastKnownName="CompVertex" />
+            <elementDefinition Id="76f351f7-a1ba-483d-96fa-13c05f24f177" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="494f466b-1567-469c-8ad9-b3708274d8aa" name="CondVertex" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d0ca1cb4-7210-4d21-94c2-52a319a3a53d" />
+        <generalsInternal>
+          <generalization Id="5db821f7-875b-4e8b-9f39-adf79f422686" isSubstitutable="false">
+            <classMoniker Id="6ccdf907-890e-458a-b054-b1ad28069662" LastKnownName="CompVertex" />
+            <elementDefinition Id="4377d0f4-cbe8-4766-8a64-264b01bf0f5c" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="2bb961c7-76db-44f9-85ab-c7461b1168b9" name="IndexedVertex" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="5054418d-851b-4ce3-ba23-45e64ab1ef55" />
+        <generalsInternal>
+          <generalization Id="75e5588d-b3f9-450b-80e0-40ef24edbde2" isSubstitutable="false">
+            <classMoniker Id="6ccdf907-890e-458a-b054-b1ad28069662" LastKnownName="CompVertex" />
+            <elementDefinition Id="eb9a683d-cf55-44b6-b2cb-d5e730943a60" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="3b7f030a-5cbd-4edd-8d72-b784dfa2e41d" name="Diagrams">
+    <elementDefinition Id="7cf2af60-f5b3-4bc7-b49b-2938e10fdd1d" />
+    <profileInstances>
+      <packageHasProfileInstances Id="cf978d93-98cb-4e63-bf5a-8f7e50c41e93">
+        <profileInstance Id="1cae86df-3570-4bbf-99d4-357fcbf07346" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="489c3c7b-1bec-4f2b-867e-85b18d7f36ba">
+        <profileInstance Id="b9a64541-e3a5-4ced-9530-569ccbf33593" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{EFD9CC96-4013-4C71-947B-199CD4770193}</ProjectGuid>
+    <RootNamespace>FPRTS2</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectName>Rage</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>C:\Program Files\Microsoft HPC Pack 2008 R2\Inc;D:\schukin\Projects\boost_1_48_0\boost_1_48_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>D:\schukin\Projects\boost_1_48_0\boost_1_48_0\stage\lib;C:\Program Files\Microsoft HPC Pack 2008 R2\Lib\i386;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalOptions>msmpi.lib %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>C:\Program Files\Microsoft HPC Pack 2008 R2\Inc;D:\schukin\Projects\boost_1_48_0\boost_1_48_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalLibraryDirectories>D:\schukin\Projects\boost_1_48_0\boost_1_48_0\stage\lib;C:\Program Files\Microsoft HPC Pack 2008 R2\Lib\i386;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>msmpi.lib %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="buffer.cpp" />
+    <ClCompile Include="codelibrary.cpp" />
+    <ClCompile Include="codeobject.cpp" />
+    <ClCompile Include="codetree.cpp" />
+    <ClCompile Include="commsystem.cpp" />
+    <ClCompile Include="compvertex.cpp" />
+    <ClCompile Include="datablock.cpp" />
+    <ClCompile Include="execsystem.cpp" />
+    <ClCompile Include="execthreadpool.cpp" />
+    <ClCompile Include="rage.cpp" />
+    <ClCompile Include="idgen.cpp" />
+    <ClCompile Include="loadcollector.cpp" />
+    <ClCompile Include="loadlogger.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="message.cpp" />
+    <ClCompile Include="messagestorage.cpp" />
+    <ClCompile Include="messagesystem.cpp" />
+    <ClCompile Include="mpicomm.cpp" />
+    <ClCompile Include="task.cpp" />
+    <ClCompile Include="taskenvironment.cpp" />
+    <ClCompile Include="rwbuffer.cpp" />
+    <ClCompile Include="taskexecutor.cpp" />
+    <ClCompile Include="taskmanager.cpp" />
+    <ClCompile Include="taskprocessor.cpp" />
+    <ClCompile Include="test1.cpp" />
+    <ClCompile Include="topology.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="atomiccodeobject.h" />
+    <ClInclude Include="atomictask.h" />
+    <ClInclude Include="binaryexpression.h" />
+    <ClInclude Include="blockvertex.h" />
+    <ClInclude Include="callvertex.h" />
+    <ClInclude Include="codeargs.h" />
+    <ClInclude Include="data.h" />
+    <ClInclude Include="datablock.h" />
+    <ClInclude Include="exception.h" />
+    <ClInclude Include="execthreadpool.h" />
+    <ClInclude Include="expression.h" />
+    <ClInclude Include="expressiondataitem.h" />
+    <ClInclude Include="expressionconstitem.h" />
+    <ClInclude Include="icommlistener.h" />
+    <ClInclude Include="icommsystem.h" />
+    <ClInclude Include="icommunicator.h" />
+    <ClInclude Include="condvertex.h" />
+    <ClInclude Include="dataobject.h" />
+    <ClInclude Include="itaskdistributor.h" />
+    <ClInclude Include="itasklistener.h" />
+    <ClInclude Include="itaskexecutorservice.h" />
+    <ClInclude Include="itaskmanager.h" />
+    <ClInclude Include="itaskmanagerservice.h" />
+    <ClInclude Include="itaskscheduler.h" />
+    <ClInclude Include="pic.h" />
+    <ClInclude Include="rangedtask.h" />
+    <ClInclude Include="structuredcodeobject.h" />
+    <ClInclude Include="task.h" />
+    <ClInclude Include="indexedvertex.h" />
+    <ClInclude Include="buffer.h" />
+    <ClInclude Include="code.h" />
+    <ClInclude Include="codeobject.h" />
+    <ClInclude Include="codetree.h" />
+    <ClInclude Include="codevertex.h" />
+    <ClInclude Include="compvertex.h" />
+    <ClInclude Include="datavertex.h" />
+    <ClInclude Include="codelibrary.h" />
+    <ClInclude Include="commsystem.h" />
+    <ClInclude Include="execsystem.h" />
+    <ClInclude Include="rage.h" />
+    <ClInclude Include="taskenvironment.h" />
+    <ClInclude Include="idgen.h" />
+    <ClInclude Include="loadcollector.h" />
+    <ClInclude Include="loadlogger.h" />
+    <ClInclude Include="iserializable.h" />
+    <ClInclude Include="message.h" />
+    <ClInclude Include="messagestorage.h" />
+    <ClInclude Include="messagesystem.h" />
+    <ClInclude Include="mpicomm.h" />
+    <ClInclude Include="multmm.h" />
+    <ClInclude Include="rwbuffer.h" />
+    <ClInclude Include="itaskexecutor.h" />
+    <ClInclude Include="taskexecutor.h" />
+    <ClInclude Include="taskmanager.h" />
+    <ClInclude Include="tasks.h" />
+    <ClInclude Include="taskscheduler.h" />
+    <ClInclude Include="taskprocessor.h" />
+    <ClInclude Include="test1.h" />
+    <ClInclude Include="timer.h" />
+    <ClInclude Include="topology.h" />
+    <ClInclude Include="types.h" />
+    <ClInclude Include="unaryexpression.h" />
+    <ClInclude Include="whilevertex.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
